@@ -3,6 +3,7 @@
 ###########################
 
 import transaction_convertor_constants
+import type_predictor
 import financial_data_constants
 import history_constants
 import history_utils
@@ -46,8 +47,9 @@ def print_entry(file_name, is_credit, line_parts):
     method_string = get_method(is_credit, file_name, line_parts)
     description_string = get_description(is_credit, line_parts)
     value_string = get_value(is_credit, line_parts)
+    type_string = type_predictor.type_predictor(description_string)
     if(len(value_string) != 0 and len(method_string) != 0):
-        print("expense_entry_list.append((\""+year_string+"\", \""+month_string+"\", (\"" + day_string + "\", "+method_string+", \""+value_string+"\", \"TODO\", \""+description_string+"\", \"TODO\")))")
+        print("expense_entry_list.append((\""+year_string+"\", \""+month_string+"\", (\"" + day_string + "\", "+method_string+", \""+value_string+"\", \""+type_string+"\", (\"" + description_string+"\", \"TODO\")))")
     else:
         print("#Ignoring ", line_parts)
         
