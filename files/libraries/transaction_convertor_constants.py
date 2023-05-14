@@ -19,7 +19,7 @@ TRANSACTION = "Matthew Gintjee"
 VENMO = "VENMO"
 MAX_YEAR = 2023
 MAX_MONTH = 1
-MIN_YEAR = 2023
+MIN_YEAR = 2022
 MIN_MONTH = 1
 
 # Credit CSV constants

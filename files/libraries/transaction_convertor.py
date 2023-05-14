@@ -47,7 +47,7 @@ def print_entry(file_name, is_credit, line_parts):
     method_string = get_method(is_credit, file_name, line_parts)
     description_string = get_description(is_credit, line_parts)
     value_string = get_value(is_credit, line_parts)
-    type_string = type_predictor.type_predictor(description_string)
+    type_string = type_predictor.predict(description_string)
     if(len(value_string) != 0 and len(method_string) != 0):
         print("expense_entry_list.append((\""+year_string+"\", \""+month_string+"\", (\"" + day_string + "\", "+method_string+", \""+value_string+"\", \""+type_string+"\", (\"" + description_string+"\", \"TODO\")))")
     else:
@@ -58,6 +58,7 @@ def get_files(dates):
     for date in dates:
         file_names = get_file_names(date)
         for file_name in file_names:
+            print(file_name)
             if(os.path.exists(file_name)):
                 file = get_transaction_file(file_name)
                 files.append(file)
