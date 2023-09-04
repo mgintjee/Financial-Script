@@ -1,0 +1,37 @@
+####################
+## Type Constants                 
+####################
+
+import expense_types
+    
+TYPE_DICT = {\
+             expense_types.Type.INCOME:("Deposit - DFAS-CLEVELAND",), \
+
+             expense_types.Type.DIVIDEND:("Dividend",), \
+
+             expense_types.Type.REWARD:("REWARD REDEMPTION",), \
+
+             expense_types.Type.ENTERTAINMENT:("GOOGLE QI YU SG","MUGU ITT","STEAMGAMESCOM","Steam Purchase",), \
+
+             expense_types.Type.GROCERIES:("QUIK STOP 0115 MARKET 55 STOCKTON 065","HUDSON NEWS ST1303 1303 WASHINGTON 111","MMIS ACCOUNT PAXRIVERMAINS VA","RITE AID","SAFEWAY","PUBLICGOODS","CVSPHARMACY","target","vons","grocery outlet","CBS NUTS CBSNUTSCOM WA","ALDI", "TINY FOOTPRINT COFFEE","CIRCLE K","WAL-MART NEIGHBORHOOD","PERKY JERKY LLC","WAL-MART"), \
+
+             expense_types.Type.RESTAURANT:("T STOCKTON Stockton 065","T Sacramento 065","5 SIPS","HELLO MAI DARLING","LOS ANGELES AIRPORT LOS ANGELES 065","THE LIGHTHOUSE RESTA SOLOMONS","DONUT CONNECTION","GAB Term B DCA 1592592009 WASHINGTON 111","PLAZA AZTECA","NOODLES  CO","PAX RIVER ALE HOUSE","TEXAS ROADHOUSE","BARD BISTRO","WAYBACK BURGERS","O-SABI JAPANESE","BUSTER OG BBQ","MINIONS CAFE 0000 UNIVERSAL CIT 065","VIVO ITALIAN KITCHEN 0000 UNIVERSAL CIT 065","ISLA NUBAR 0000 UNIVERSAL CIT 065","INTERNATIONAL CAFE","HAPPY PANDA","HOOK BURGER","PPDUTCH","JACK IN THE BOX","CALIFORNIA DONUTS","FLIGHTLINE CAF","TOMMY 37", "chipotle","burger king","popeyes","its boba time","bgs cafe","settebello","chakaa tea house","in n out","crumbl","waba grill","wendy","carls jr","panda express","mcdonald","honey cup","love pho cafe","red robin","anacappuccino","ragamuffin","starbucks","nick the greek","am noodle inc","taco bell", "it boba time", "boku", "blaze pizza","four brix winery","PANERA","SNACK MR GREEN BUBBLE","LUNA GRILL", "PPDUTCHBROS","VILLAGE DRIVE IN","L  L HAWAIIAN BBQ", "GEORGES HAMBURGERS", "O KAZ YA KITCHEN","PEKING CHINESE FAST", "THE GREAT CENTRAL STEAK", "BLOSSOM TEA HOUSE","LA MEXICANA BAKERY", "LITTLE CAESARS", "5GUYS", "BOTTLE  PINT", "AFTERS ICE CREAM","JIMBOS FUNNEL CAKES", "HONEYMEE", "SEOUL HOUSE OF TOFU", "RUBIOS", "MOLCASALSITAS MEXICAN","BOBAHOLIC", "WAGYU MEAT  GRILL", "TACOS LOS CHOLOS", "PICK UP STIX", "RAISING CANES","THAI OR CHINESE FOOD" ,"WAGON WHEEL BREWING"), \
+
+             expense_types.Type.COMPENSATION:("deposit - venmo","Deposit - IRS TREAS 310","Deposit - FRANCHISE TAX BD"), \
+
+             expense_types.Type.HOUSING:("OCM-MAYDEP WEB PMTS","Yardi Service",), \
+
+             expense_types.Type.HEALTHCARE:("FAMILY VISION OPTOMETRIC","PATIENT ACCTG","VENTURA ORTHO OXNARD","wwwcaremarkcom","VENTURA ORTHOPEDICS"), \
+
+             expense_types.Type.PET_EXPENSES:("SQ SIXPAWS DOG SCHOOL","PETCO", "PETCO COM","PETCO VITAL","pet food express","101 PET VET INC"), \
+
+             expense_types.Type.CAR_EXPENSES:("1440 W CHANNEL ISLANDS BL OXNARD 065","1901 N ROSE AVE 574441781 OXNARD 065","CITYOFSACIPSPKGMETER","OAKLAND PARK METER","24729 SOUTH MERCY SPRINGS LOS BANOS 065","FREEPORT GAS  FOOD","PILOT 00012773 AVENAL CA", "STATE FARM INSURANCE","frank auto works","chevron","arco","nex fuel","105 5TH ST 57444676803 OAKLAND 065","31428 RIDGE ROUTE RD 1000 CASTAIC 065","S  G ENERGY INC CAMARILLO", "STATE OF CALIF DMV", "12310 HIGHWAY 33 57445612 SANTA NELLA 065","7-ELEVEN"), \
+
+             expense_types.Type.MATERIALISM:("THREADWALLETSLLC","DRIFITBIT LLC","GOOGLE Google Store 855-836-3987 CA","GOODR LLC 847-232-9923 CA","KOHL 0583 VENTURA CA","VX-23 ARO PATUXENT RIVE","FRGTEAMFANSHOP","PROIMAGESPORTS707","NICHI BEI BUSSAN","ADIDAS AMERICA INC CAMARILLO","TILE INC HTTPSWWWTILE CA","CONTAINERSTOREOXNARDCA","THE HURTSKURT","incrediwear","hydroflask","amzn mktp","navy exchange","theearthling","amazoncom","harrys","11six24 pickle", "ace hardware","INSTANT BRANDS LLC", "DICKS SPORTING GOODS","GROOVE LIFE","ADIDAS US ONLINE STORE","TOKYO JAPANESE LIFESTYLE", "BED BATH  BEYOND", "BATH AND BODY WORKS", "JOANN STORES","WL GORE Wilmington DE", "DICK SPORTING GOODS INC", "LANDS END", "DULUTH TRADING"), \
+
+             expense_types.Type.TRAVEL:("courtyard by marriott","BKGHOTEL AT BOOKINGC"), \
+
+             expense_types.Type.FEE:("CA DMV FEE",), \
+             
+             expense_types.Type.MISC:("VENMO PAYMENT",), \
+            }

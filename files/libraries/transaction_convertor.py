@@ -48,8 +48,8 @@ def print_entry(file_name, is_credit, line_parts):
     description_string = get_description(is_credit, line_parts)
     value_string = get_value(is_credit, line_parts)
     type_string = type_predictor.predict(description_string)
-    if(len(value_string) != 0 and len(method_string) != 0):
-        print("expense_entry_list.append((\""+year_string+"\", \""+month_string+"\", (\"" + day_string + "\", "+method_string+", \""+value_string+"\", \""+type_string+"\", (\"" + description_string+"\", \"TODO\")))")
+    if(type_string != "UNKNOWN"):
+        print("expense_entry_list.append((\""+year_string+"\", \""+month_string+"\", (\"" + day_string + "\", "+method_string+", \""+value_string+"\", \""+type_string+"\", \"" + description_string+"\", \"TODO\")))")    
     else:
         print("#Ignoring ", line_parts)
         
@@ -58,7 +58,6 @@ def get_files(dates):
     for date in dates:
         file_names = get_file_names(date)
         for file_name in file_names:
-            print(file_name)
             if(os.path.exists(file_name)):
                 file = get_transaction_file(file_name)
                 files.append(file)
@@ -112,7 +111,7 @@ def get_method(is_credit, file_name, line_parts):
         if(transaction_convertor_constants.TRANSFER in method):
             return ""
         elif(transaction_convertor_constants.PAYMENT in method):
-            return ""
+            return "VENMO_PAYMENT"
         elif(transaction_convertor_constants.TRANSACTION in method):
             return ""
         elif(transaction_convertor_constants.VENMO in method):
@@ -129,7 +128,7 @@ def get_value(is_credit, line_parts):
     if(len(debit) != 0):
         return str(-int(float(debit) * 100))
     else:
-        return str(int(float(credit)  * 100))
+        return str(int(float(credit) * 100))
     
 def get_date(is_credit, line_parts):
     if(is_credit):
